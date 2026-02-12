@@ -7,43 +7,99 @@ body{
     font-size: 12px;
     background-color: #020618;
     color: white;
+    /* line-height: 10px; */
 }
-.main-container{
+main{
+    border: 1px solid #314158;
     background-color: #0F172B;
     border-radius: 4px;
-    /* padding: 10px; */
-    border: #314158;
-   
-    border-style:solid;
-    
-    margin: 100px;
-    border-width: 1px;
+    margin: 70px;
+    height: 90%;
+    display: block;
+
 }
-.nav-bar{
-    border: #314158;
-    border-style:solid;
-    border-width: 1px;
-    /* margin: 10px; */
+.header ul{
+    display: flex;
     list-style: none;
-}
-.nav-bar li{
-    border: #314158;
-    /* padding: 1px; */
-    border-style:solid;
-     border-width: 1px;
-     display: inline;
-     margin: 40px;
-
-}
-.name{    
-    /* margin-top: 5px; */
-    /* margin-right: 10px; */
-    /* margin-left: 10px; */
-    margin-bottom: 5px;
+    justify-content: space-around;
+    /* padding: 10px; */
+    border-bottom: 1px solid #314158;
+    text-align: center;
     
 }
-.space{
-    margin: 200px;
+.header ul li{
+    border-right: 1px solid #314158;
+    padding: 8px;
+    text-align: start;
+    text-align: center;
+}
+.header ul li.name{
+    
+    flex: 2;
+    
+}
+.header ul li.hello, .header ul li.about-me,.header ul li.projects, .header ul li.space-after-name{
+    flex: 1;
+}
+.header ul li.space-after-projects{
+    flex: 5;
+}
+.home-content{
+    display: flex;
+    margin: 250px ;
+    gap: 160px;
+    align-items: center;
+}
+.introduction-container{
+    margin-bottom: 48px;
+}
+.introduction-container .name{
+    color: white;
+    font-size: 48px;
+}
+.introduction-container .job-title{
+    color: #615FFF;
+    font-size: 18px;
+}
+.link-container{
+    line-height: 30px;
+}
+.link-container .commented-text{
+    color: #90A1B9;
 }
 
+.git-link .const{
+    color: #615FFF;
+}
+.link-container .git-link .github-link{
+    color: #00D5BE
+}
+.git-link .actual-link{
+    color: #FFA1AD;
+}
 
+.social-media-container{
+    /* background-color: black; */
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #314158;
+    list-style: none;
+    /* padding: 10px; */
+    text-align: center;
+    justify-content: space-around;
+    /* width: 100%; */
+}
+.social-media-container li{
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #314158;
+    
+}
+.social-media-container .menu-item{
+    border-right:none;
+
+}
+.social-media-container .footer-space{
+    /* background-color: white; */
+    flex: 2;
+}
