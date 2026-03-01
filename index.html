@@ -28,23 +28,23 @@
   </head>
   <body>
     <!-- Home Foreground -->
-    <div class="home ">
+    <div class="home">
       <!-- Navbar -->
       <nav class="navbar">
-        <div class="nav__container container">
+        <div class="nav__container">
           <div class="nav__name">
-              <a href="#" class="menu__item-mobile-link">_zaid</a>
-            </div>
+            <a href="#" class="menu__item-mobile-link">_zaid</a>
+          </div>
           <!-- Web Nav -->
           <div class="nav__main-menu-items">
-          <ul class="nav__main-menu-list">
-            <li class="current">
-              <a href="/">_home</a>
-            </li>
-            <li>
-              <a href="#">_about-me</a>
-            </li>
-            <!-- <li>
+            <ul class="nav__main-menu-list">
+              <li class="current">
+                <a href="/">_home</a>
+              </li>
+              <li>
+                <a href="#">_about-me</a>
+              </li>
+              <!-- <li>
               <a href="#">_projects</a>
             </li>
             <li>
@@ -53,10 +53,10 @@
             <li>
               <a href="#">Author</a>
             </li> -->
-            <!-- <li>
+              <!-- <li>
               <a href="contact.html">Contact</a>
             </li> -->
-            <!-- <li>
+              <!-- <li>
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -74,35 +74,67 @@
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li> -->
-          </ul>
-        </div>
-        <div class="nav__contact">
-              <a href="#" class="menu__item-contact-link">_contact-me</a>
+            </ul>
           </div>
-        
+          <div class="nav__contact">
+            <a href="#" class="menu__item-contact-link">_contact-me</a>
+          </div>
 
-
-
-
-
+          <!--TODO: ADD MOBILE MENU -->
           <!-- Mobile menu -->
           <div class="nav__mobile-menu">
             <!-- Name -->
 
-            
             <!-- Hamburger button -->
-            <div
-              class="mobile-menu-toggle"
-              
-            >
+            <div class="mobile-menu-toggle">
               <i class="fas fa-bars fa-2x"></i>
             </div>
+            <!-- Mobile Menu Items -->
+            <!-- <div class="mobile__menu-items">
+              <ul class="mobile__menu-list">
+                <li class="current">
+              <a href="/">_home</a>
+            </li>
+            <li>
+              <a href="#">_about-me</a>
+            </li>
+              </ul>
+             </div> -->
           </div>
         </div>
       </nav>
       <!-- Home Content -->
 
-      <div class="home-content"></div>
+      <div class="home-content">
+        <div class="home-content__flex container">
+          <!-- About Container -->
+          <div class="home-content__about">
+            <div class="home-content__introduction">
+              <p class="home-content__text">Hi all. I am</p>
+              <div class="home-content__details">
+                <h1 class="home-content__name">Zaid Shaikh</h1>
+                <h2 class="home-content__job-title">> Front-end developer</h2>
+              </div>
+            </div>
+            <div class="home-content__links">
+              <p class="home-content__text">// Complete the game to continue</p>
+              <p class="home-content__text">// find my profile on Github:</p>
+              <div class="home-content__git-links">
+                <span class="home-content__const">const</span>
+                <span class="home-content__githublinks">githubLink</span>
+                <span class="home-content__equals">=</span>
+                <a href="#" class="home-content__link"
+                  >"https://github.com/example/url"</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="home-content__image">
+            <img src="/images/profile.jpg" alt="profile" />
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

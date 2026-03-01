@@ -72,6 +72,8 @@ img{
     border: 1px solid var(--theme-background);
     border-radius: 8px;
     background-color: var(--theme-background);
+    position: relative;
+    
 }
 .nav__container{
     
@@ -120,14 +122,69 @@ img{
 
 .nav__mobile-menu{
     display: none;
+    
 }
+.navbar a{
+    font-size: 1.2rem;
+}
+/* Home Content */
+.home-content{
+    padding: 140px 140px;
+}
+.home-content__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 146px;
+}
+.home-content__image{
+    /* height: 100px; */
+    width: 400px;
 
+}
+.home-content__image img{
+    border-radius: 20px;
+}
+.home-content__about{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    
+}
+.home-content__text{
+    color: #314058;
+    font-size: 1.2rem;
+}
+.home-content__name{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.home-content__job-title{
+    font-size: 1.5rem;
+    color: var(--theme-primitive);
+    font-weight: 500;    
+}
+.home-content__introduction{
+    line-height: 1.2;
+}
+.home-content__const{
+    color: var(--theme-primitive);
+}
+.home-content__githublinks{
+    color: var(--theme-primitive-teal);
+}
+.home-content__link{
+    color: var(--active);
+}
+.home-content__git-links{
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
 /* Media Queries */
 @media(max-width:968px){    
     .nav__mobile-menu{        
         display: block; 
-        padding:1rem; 
-        
+        padding:1rem;         
     }
     .nav__main-menu-list,.nav__contact{
         display: none;
@@ -137,5 +194,6 @@ img{
         flex: 0;
         padding: 0;
         font-size: 2rem;
+        margin-left: 1rem;
     }
 }
