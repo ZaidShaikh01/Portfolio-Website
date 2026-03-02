@@ -292,7 +292,7 @@ img{
     .home-content {  
     flex: 2;
     }
-        .home-content__png {
+    .home-content__png {
         width: 488px;
         top: -377px;
         left: -40px;
@@ -318,4 +318,14 @@ img{
         display: flex;
         flex-direction: column;
     }
+}
+
+@media (max-width: 376px) {
+  /* Styles for standard smartphones */
+  .home{
+    margin: 40px 10px;
+  }
+  .home-content {
+    padding: 10px 140px;
+}
 }
