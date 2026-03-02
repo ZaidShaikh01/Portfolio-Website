@@ -69,7 +69,7 @@ img{
     color: #020618;
 }
 .home{
-    margin: 5rem 3rem;
+    margin: 5rem 5rem;
     border: 1px solid var(--theme-border);
     border-radius: 8px;
     background-color: var(--theme-background);
@@ -130,10 +130,9 @@ img{
     font-size: 1.2rem;
 }
 /* Home Content */
-.home-content{
-    padding: 12rem 3rem;
-}
+
 .home-content__flex{
+    margin: 17rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,16 +143,25 @@ img{
     width: 33rem;
     position: relative;
 }
-/* .home-content__png{
+
+
+.image{
     position: absolute;
-    top: -123px;
-    left: -189px;
-    width: 800px;
-} */
-/* .home-content__profile{
-    position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image1{
+    z-index: 2;
+}
+.image2{
+    z-index: 1;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
     
-} */
+}
 .home-content__image img{
     border-radius: 20px;
     
@@ -233,13 +241,7 @@ img{
 }
 @media(max-width:992px){    
    
-    .nav__mobile-menu{        
-        display: block; 
-        padding:1rem;         
-    }
-    .nav__main-menu-list,.nav__contact{
-        display: none;
-    }
+   
     .nav__name{
         border: none;
         flex: 0;
@@ -253,6 +255,20 @@ img{
     }
 }
 @media(max-width:768px){
+    .home{
+        margin: 2rem 2rem;
+    }
+    .home-content__flex{
+        margin: 10rem auto;
+    }
+     .nav__mobile-menu{        
+        display: block; 
+        padding:1rem;         
+    }
+    .nav__main-menu-list,.nav__contact{
+        display: none;
+    }
+
     
     .home-content__flex{
         flex-direction: column;
@@ -260,22 +276,20 @@ img{
         justify-content: center;
     }
     
-    .home-content__profile {
+    .home-content__profile,.home-content__image {
         display: none;
     }
 }
 @media (max-width: 576px) {
-    
+    .home-content__flex{
+        margin: 5rem auto;
+    }
     .footer__gitLink{
         display: none;
     }    
     .footer__flex{
         justify-content: space-around;
     }
-    .home-content {  
-    flex: 2;
-    }
-    
     .home-content__flex{
         flex-direction: column;
         justify-content: center;
