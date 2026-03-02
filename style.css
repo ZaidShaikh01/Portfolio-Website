@@ -281,9 +281,7 @@ img{
     }
 }
 @media (max-width: 576px) {
-    .home-content__flex{
-        margin: 5rem auto;
-    }
+   
     .footer__gitLink{
         display: none;
     }    
