@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zaid-Portfolio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -24,10 +23,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <title>Projects - Portfolio</title>
     <link rel="stylesheet" href="/CSS/style.css" />
   </head>
   <body>
-    <!-- Home Foreground -->
     <div class="home">
       <!-- Navbar -->
       <nav class="navbar">
@@ -38,14 +37,14 @@
           <!-- Web Nav -->
           <div class="nav__main-menu-items">
             <ul class="nav__main-menu-list">
-              <li class="current">
+              <li >
                 <a href="index.html">_home</a>
               </li>
-              <li>
-                <a href="about.html">_about-me</a>
+              <li >
+                <a href="projects.html">_projects-me</a>
               </li>
-              <li>
-                <a href="projects.html">_projects</a>
+              <li class="current">
+                <a href="projects.html" >_projects</a>
               </li>
               <!-- <li>
               <a href="#">_projects</a>
@@ -79,7 +78,7 @@
             </li> -->
             </ul>
           </div>
-          
+
           <div class="nav__contact">
             <a href="#" class="menu__item-contact-link">_contact-me</a>
           </div>
@@ -100,51 +99,75 @@
               <a href="/">_home</a>
             </li>
             <li>
-              <a href="#">_about-me</a>
+              <a href="#">_projects-me</a>
             </li>
               </ul>
              </div> -->
           </div>
         </div>
       </nav>
-      <!-- Home Content -->
+      <!-- Projects Content -->
 
-      <div class="home-content">
-        <div class="home-content__flex container">
-          <!-- About Container -->
-          <div class="home-content__about">
-            <div class="home-content__introduction">
-              <p class="home-content__text">Hi all. I am</p>
-              <div class="home-content__details">
-                <h1 class="home-content__name">Zaid Shaikh</h1>
-                <h2 class="home-content__job-title">> Front-end developer</h2>
-              </div>
-            </div>
-            <div class="home-content__links">
-              <p class="home-content__text">// Complete the game to continue</p>
-              <p class="home-content__text">// find my profile on Github:</p>
-              <div class="home-content__git-links">
-                <span class="home-content__const">const</span>
-                <span class="home-content__githublinks">githubLink</span>
-                <span class="home-content__equals">=</span>
-                <a href="#" class="home-content__link"
-                  >"https://github.com/example/url"</a
-                >
+      <div class="projects">
+        <div class="projects__flex">
+          <!-- Page Items -->
+          <div class="projects__page-items">
+            <div class="projects__page-items__flex">
+              
+              <div class="projects__page-right">
+                <div class="projects__pages-accordian">
+                  <div class="projects__pages-accordian-projects-info">
+                    <div class="projects__pages-accordian-projects-info-heading">
+                      <i class="fa-solid fa-angle-down"></i>
+                      Personal-info
+                    </div>
+                    <div class="projects__pages-accordian-techstack">
+                      <form class="projects__tech-checkbox">
+                         <label for="html">
+                            <input type="checkbox" name="languages"
+                            id="html"
+                            value="html">
+                            <i class="fa-brands fa-html5"></i> HTML
+                         </label>
+                         <label for="Flutter">
+                            <input type="checkbox" name="languages"
+                            id="flutter"
+                            value="flutter">
+                            <i class="fa-brands fa-flutter"></i>
+                            Flutter
+                         </label>
+                         <label for="Css">
+                            <input type="checkbox" name="languages"
+                            id="css"
+                            value="css">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            CSS
+                         </label>
+                      </form>
+                    </div>
+                  </div>
+                  
+                </div>
               </div>
             </div>
           </div>
-          <!-- Image -->
-           <!-- ??TODO: USE BEFORE OR SOMETHING HERE -->
-          <div class="home-content__image">
-            <!-- <div class="image home-content__png">
-              <img src="/images/blur_1.png" alt="profile" />
+          <!-- Personal information container -->
+           <div class="projects__personal-info">
+            <div class="projects__personal-info-container">
+                <!-- Tabs -->
+                <div class="projects__personal-info-tabs">
+                    <div class="projects__personal-info-heading">
+                        education
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <!-- Projects Area -->
+                 <div class="projects__area">
+                    <!-- Projects Section -->
+                     
+                 </div>
             </div>
-            <div class="home-content__profile">
-              <img src="/images/background_blur.svg" alt="profile">
-            </div> -->
-            <img src="/images/profile.jpg" alt="profile" class="image image1">
-            <img src="/images/background_blur.svg" alt="overlay" class="image image2">
-          </div>
+           </div>
         </div>
       </div>
       <!-- Footer -->
@@ -186,9 +209,8 @@
             </ul>
           </div>
           <div class="footer__gitLink">
-            <a href="#" class="footer__git">
-              @username</a>
-              <i class="fa-brands fa-github"></i>
+            <a href="#" class="footer__git"> @username</a>
+            <i class="fa-brands fa-github"></i>
           </div>
         </div>
       </footer>
