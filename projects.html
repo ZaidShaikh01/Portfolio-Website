@@ -41,7 +41,7 @@
                 <a href="index.html">_home</a>
               </li>
               <li >
-                <a href="projects.html">_projects-me</a>
+                <a href="about.html">_about-me</a>
               </li>
               <li class="current">
                 <a href="projects.html" >_projects</a>
@@ -121,25 +121,29 @@
                       <i class="fa-solid fa-angle-down"></i>
                       Personal-info
                     </div>
-                    <div class="projects__pages-accordian-techstack">
-                      <form class="projects__tech-checkbox">
+                    <div class="projects__pages-accordian-techstack " >
+                      <form class="projects__tech-checkbox ">
                          <label for="html">
                             <input type="checkbox" name="languages"
                             id="html"
-                            value="html">
+                            value="html"
+                            class="substituted">
+
                             <i class="fa-brands fa-html5"></i> HTML
                          </label>
                          <label for="Flutter">
                             <input type="checkbox" name="languages"
                             id="flutter"
-                            value="flutter">
+                            value="flutter"
+                            class="substituted">
                             <i class="fa-brands fa-flutter"></i>
                             Flutter
                          </label>
                          <label for="Css">
                             <input type="checkbox" name="languages"
                             id="css"
-                            value="css">
+                            value="css"
+                            class="substituted">
                             <i class="fa-brands fa-css3-alt"></i>
                             CSS
                          </label>
@@ -152,11 +156,11 @@
             </div>
           </div>
           <!-- Personal information container -->
-           <div class="projects__personal-info">
-            <div class="projects__personal-info-container">
+           <div class="projects__project-info">
+            <div class="projects__project-info-container">
                 <!-- Tabs -->
-                <div class="projects__personal-info-tabs">
-                    <div class="projects__personal-info-heading">
+                <div class="projects__project-info-tabs">
+                    <div class="projects__project-info-heading">
                         education
                         <i class="fa-solid fa-xmark"></i>
                     </div>
@@ -164,7 +168,64 @@
                 <!-- Projects Area -->
                  <div class="projects__area">
                     <!-- Projects Section -->
-                     
+                     <div class="projects__card-flex">
+                      <!-- Item 1 -->
+                      <div class="projects__card-container">
+                        <div class="projects__headings">
+                          <h3 class="projects__card-heading-primary">
+                            Project 1
+                          </h3>
+                          <h3 class="projects__card-heading-secoundary">
+                           // _ui-animations
+                          </h3>
+
+                        </div>
+                        <!-- project card -->
+                         <div class="projects__card">
+                          <!-- Image -->
+                           <div class="projects__image">
+                            <img src="/images/project.png" alt="project">
+                           </div>
+                           <!-- Text container -->
+                            <div class="projects__text-container">
+                              <p class="projects__details">
+                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                              </p>
+                              <a href="#" class="projects__btn btn">
+                                view-project
+                              </a>
+                            </div>
+                         </div>
+                      </div>
+                      <!-- Item 2 -->
+                      <div class="projects__card-container">
+                        <div class="projects__headings">
+                          <h3 class="projects__card-heading-primary">
+                            Project 2
+                          </h3>
+                          <h3 class="projects__card-heading-secoundary">
+                           // _ui-animations
+                          </h3>
+
+                        </div>
+                        <!-- project card -->
+                         <div class="projects__card">
+                          <!-- Image -->
+                           <div class="projects__image">
+                            <img src="/images/project-1.png" alt="project">
+                           </div>
+                           <!-- Text container -->
+                            <div class="projects__text-container">
+                              <p class="projects__details">
+                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                              </p>
+                              <a href="#" class="projects__btn btn">
+                                view-project
+                              </a>
+                            </div>
+                         </div>
+                      </div>
+                     </div>
                  </div>
             </div>
            </div>
@@ -217,3 +278,10 @@
     </div>
   </body>
 </html>
+
+<!-- !!TODO: 
+1. Add Grid in project section
+2. Add media queries
+
+
+-->

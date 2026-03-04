@@ -202,6 +202,7 @@ img{
     line-height: 1.6;
 }
 
+
 /* Footer */
 .footer__flex{
     font-size: 1.2rem;
@@ -368,21 +369,21 @@ img{
 .projects__flex{
     display: flex;
 }
-.projects__personal-info{
+.projects__project-info{
     flex: 1;
 }
-.projects__personal-info-container{
+.projects__project-info-container{
     display: flex;
     flex-direction: column;
     height: 100%;
     
 }
-.projects__personal-info-heading{
+.projects__project-info-heading{
     padding: 1rem;
     border-right: 1px solid var(--theme-border);
     display: inline-block;
 }
-.projects__personal-info-tabs{
+.projects__project-info-tabs{
     border-bottom: 1px solid var(--theme-border);
 }
 .projects__area-grid{
@@ -400,12 +401,36 @@ img{
 
 .projects__area{
     flex: 1;
+    margin: 2rem 2rem;
 }
-.projects__scroll{
+.projects__headings{
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+.projects__card-heading-primary{
+    color: var(--theme-primitive);
+}
+.projects__card{
+    width: 25rem;
+    background-color: var(--theme-backdrop);
+    border-radius: 10px;
     
-    width: 2rem;
-    text-align: center;
-    
+   
+}
+.projects__text-container{
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+.projects__details{
+    margin-bottom: 1rem;
+}
+.projects__btn{
+    margin-bottom: 1rem;
+    background-color: var(--theme-border);
+    color: white;
 }
 .projects__pages-accordian-techstack{
     padding: 1rem;
@@ -423,7 +448,11 @@ img{
     text-align: center;
 }
 
-
+.projects__card-flex{
+    display: flex;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+}
 /* Media Queries */
 @media(max-width:1200px){
     
@@ -507,3 +536,6 @@ img{
   /* Styles for standard smartphones */
 
 }
+
+
+
