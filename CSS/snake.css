@@ -1,12 +1,36 @@
+body{
+  background-color: rebeccapurple;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0rem 10rem;
+}
+
+.container{
+  display: flex;
+  border-radius: 8px;
+  background-color: #1E1A4D;
+  padding: 32px;
+  gap: 24px;
+}
 #gameContainer {
   text-align: center;
 }
 
 #gameBoard {
-  border: 3px solid;
+  /* border: 3px solid; */
+  border-radius: 8px;
 }
 
-#scoreText {
+/* #scoreText {
   font-family: 'Permanent Marker', cursive;
   font-size: 100px;
 }
@@ -19,4 +43,4 @@
   border: 4px solid;
   border-radius: 15px;
   cursor: pointer;
-}
+} */

@@ -1,14 +1,14 @@
 const gameBoard = document.querySelector('#gameBoard');
 const ctx = gameBoard.getContext('2d');
-const scoreText = document.querySelector('#scoreText');
-const resetBtn = document.querySelector('#resetBtn');
+// const scoreText = document.querySelector('#scoreText');
+// const resetBtn = document.querySelector('#resetBtn');
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
-const boardBackground = 'white';
-const snakeColor = 'lightgreen';
-const snakeBorder = 'black';
-const foodColor = 'red';
-const unitSize = 25;
+const boardBackground = '#1D293D';
+const snakeColor = '#46ECD5';
+const snakeBorder = '#46ECD5';
+const foodColor = '#46ECD5';
+const unitSize = 15;
 let running = false;
 let xVelocity = unitSize;
 let yVelocity = 0;
@@ -24,12 +24,12 @@ let snake = [
 ];
 
 window.addEventListener('keydown', changeDirection);
-resetBtn.addEventListener('click', resetGame);
+// resetBtn.addEventListener('click', resetGame);
 gameStart();
 
 function gameStart() {
   running = true;
-  scoreText.textContent = score;
+  // scoreText.textContent = score;
   createFood();
   drawFood();
   nextTick();
@@ -43,7 +43,7 @@ function nextTick() {
       drawSnake();
       checkGameOver();
       nextTick();
-    }, 75);
+    }, 100);
   } else {
     displayGameOver();
   }
@@ -66,6 +66,33 @@ function createFood() {
 function drawFood() {
   ctx.fillStyle = foodColor;
   ctx.fillRect(foodX, foodY, unitSize, unitSize);
+  
+  
+}
+function drawFood() {
+    const cx = foodX + unitSize / 2;
+    const cy = foodY + unitSize / 2;
+
+    const colors = [
+        "#43D9AD",
+        "#63E5BE",
+        "#8EF0D4",
+        "#BDF8E8",
+        "#FFFFFF"
+    ];
+
+    for (let i = 0; i < colors.length; i++) {
+        ctx.beginPath();
+        ctx.fillStyle = colors[i];
+        ctx.arc(
+            cx,
+            cy,
+            unitSize * (0.45 - i * 0.08),
+            0,
+            Math.PI * 2
+        );
+        ctx.fill();
+    }
 }
 function moveSnake() {
   const head = { x: snake[0].x + xVelocity, y: snake[0].y + yVelocity };
@@ -73,20 +100,61 @@ function moveSnake() {
   // if food is eaten
   if (snake[0].x == foodX && snake[0].y == foodY) {
     score += 1;
-    scoreText.textContent = score;
+    // scoreText.textContent = score;
     createFood();
   } else {
     snake.pop();
   }
 }
+// function drawSnake() {
+//   ctx.fillStyle = snakeColor;
+//   ctx.strokeStyle = snakeBorder;
+//   snake.forEach((snakePart) => {
+//     ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+//     ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
+//   });
+
+//   // for (let i = 0; i < snake.length; i++) {
+//   //   if (i == 0) {
+//   //     ctx.roundRect(snake[0].x, snake[0].y, unitSize, unitSize, [40]);
+//   //     ctx.stroke();
+//   //   }
+//   //   ctx.fillRect(snake[i].x, snake[i].y, unitSize, unitSize);
+//   //   ctx.strokeRect(snake[i].x, snake[i].y, unitSize, unitSize);
+//   // }
+// }
 function drawSnake() {
-  ctx.fillStyle = snakeColor;
-  ctx.strokeStyle = snakeBorder;
-  snake.forEach((snakePart) => {
-    ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
-    ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
-  });
+  const head = snake[0];
+  const tail = snake[snake.length - 1];
+
+  const gradient = ctx.createLinearGradient(
+    head.x,
+    head.y,
+    tail.x,
+    tail.y
+);
+
+gradient.addColorStop(0.00, "#43D9ADFF"); // 100%
+gradient.addColorStop(0.25, "#43D9ADCC"); // 80%
+gradient.addColorStop(0.50, "#43D9AD99"); // 60%
+gradient.addColorStop(0.75, "#43D9AD4D"); // 30%
+gradient.addColorStop(1.00, "#43D9AD00"); // 0%
+
+  ctx.strokeStyle = gradient;
+  ctx.lineWidth = unitSize/1.8;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  ctx.beginPath();
+  ctx.moveTo(head.x + unitSize / 2, head.y + unitSize / 2);
+
+  for (let i = 1; i < snake.length; i++) {
+    ctx.lineTo(snake[i].x + unitSize / 2, snake[i].y + unitSize / 2);
+  }
+
+  ctx.stroke();
 }
+
 function changeDirection() {
   const keyPressed = event.keyCode;
   const LEFT = 37;

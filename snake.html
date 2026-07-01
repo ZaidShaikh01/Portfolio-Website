@@ -1,17 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/snake.css">
-</head>
-<body>
-    <div id="gameContainer">
-        <canvas id="gameBoard" width="500" height="500"></canvas>
-        <div id="scoreText">0</div>
-        <button id="resetBtn">Reset</button>
+    <link rel="stylesheet" href="/CSS/snake.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="gameContainer">
+        <canvas id="gameBoard" width="238" height="405"></canvas>
+        <!-- <div id="scoreText">0</div>
+        <button id="resetBtn">Reset</button> -->
+      </div>
+      <div class="right-frame">
+        <div class="frame-3">
+          <div class="game-nav">
+            <div class="game-rules">
+              <p>// Use Keyboard</p>
+              <p>// Arrows to play</p>
+            </div>
+            <div class="game-btns">
+              <div class="button-top"></div>
+              <div class="buttons-bottom">
+                <div class="button-left"></div>
+                <div class="button-down"></div>
+                <div class="button-right"></div>
+              </div>
+            </div>
+          </div>
+          <div class="food-left">
+            <div class="food-text">
+                // food left
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="/javascript/snake.js"></script>
-</body>
+  </body>
 </html>

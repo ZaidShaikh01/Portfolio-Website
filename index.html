@@ -79,7 +79,7 @@
             </li> -->
             </ul>
           </div>
-          
+
           <div class="nav__contact">
             <a href="#" class="menu__item-contact-link">_contact-me</a>
           </div>
@@ -134,16 +134,19 @@
             </div>
           </div>
           <!-- Image -->
-           <!-- ??TODO: USE BEFORE OR SOMETHING HERE -->
+          <!-- ??TODO: USE BEFORE OR SOMETHING HERE -->
           <div class="home-content__image">
-            <!-- <div class="image home-content__png">
-              <img src="/images/blur_1.png" alt="profile" />
+            <!-- <img src="/images/profile.jpg" alt="profile" class="image image1"> -->
+            <div id="gameContainer">
+              <canvas id="gameBoard" width="500" height="500"></canvas>
+              <div id="scoreText">0</div>
+              <button id="resetBtn">Reset</button>
             </div>
-            <div class="home-content__profile">
-              <img src="/images/background_blur.svg" alt="profile">
-            </div> -->
-            <img src="/images/profile.jpg" alt="profile" class="image image1">
-            <img src="/images/background_blur.svg" alt="overlay" class="image image2">
+            <img
+              src="/images/background_blur.svg"
+              alt="overlay"
+              class="image image2"
+            />
           </div>
         </div>
       </div>
@@ -186,12 +189,12 @@
             </ul>
           </div>
           <div class="footer__gitLink">
-            <a href="#" class="footer__git">
-              @username</a>
-              <i class="fa-brands fa-github"></i>
+            <a href="#" class="footer__git"> @username</a>
+            <i class="fa-brands fa-github"></i>
           </div>
         </div>
       </footer>
+      <script src="/javascript/snake.js"></script>
     </div>
   </body>
 </html>
